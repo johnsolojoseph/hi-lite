@@ -1,0 +1,39 @@
+<div class="navbar-fixed">
+  <nav class="navy-blue" role="navigation" id="navbar">
+    {{#if user}}
+    <div class="nav-wrapper container"><a id="logo-container" href="/ideas" class="brand-logo">Hi-Lite</a>
+    {{else}}
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Hi-Lite</a>
+      {{/if}}
+      <ul class="right hide-on-med-and-down">
+
+
+
+
+        {{#if user}}
+        <li><a href="/ideas">Home</a></li>
+        <li><a href="/ideas/add">Create</a></li>
+        <li><a href="/users/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/">Home</a></li>
+        <li><a href="/users/login">Sign In</a></li>
+        <li><a href="/users/register">Get Started</a></li>
+        {{/if}}
+      </ul>
+
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+  <ul id="nav-mobile" class="sidenav">
+    {{#if user}}
+    <li><a href="/ideas">Home</a></li>
+    <li><a href="/users/logout">Logout</a></li>
+    {{else}}
+    <li><a href="/">Home</a></li>
+    <li><a href="/users/login">Sign In</a></li>
+    <li><a href="/users/register">Get Started</a></li>
+    {{/if}}
+
+  </ul>

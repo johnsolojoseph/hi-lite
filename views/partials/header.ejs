@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hilite</title>
+     <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+
+    <script>
+    $(document).ready(function(){
+    $('.modal').modal();
+
+    });
+    </script>
+
+
+</head>
+<body>
+  <div class="navbar-fixed">
+  <nav class="navy-blue" role="navigation" id="navbar">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Hi-Lite</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/api/v1/blogs">Read</a></li>
+        <li><a href="/login">Sign In</a></li>
+        <li><a href="/register">Get Started</a></li>
+      </ul>
+
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+
+  <ul id="nav-mobile" class="sidenav">
+    <li><a href="/api/v1/blogs">Read</a></li>
+    <li><a href="/login">Sign In</a></li>
+    <li><a href="/register">Get Started</a></li>
+
+  </ul>

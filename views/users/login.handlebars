@@ -1,0 +1,40 @@
+
+
+<div class="container">
+
+  <br>
+    <div class="card-login">
+    <div class="card">
+    <div class="login-text center">
+      <h2>Sign In</h2>
+      </div>
+      <div class="row">
+          <div class="container login-form">
+          <form action="/users/login" method="POST" class="col s12">
+            <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" name="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                    <span class="helper-text" data-error="Please include an @ in the email address."></span>
+                  </div>
+                </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="password" name="password" type="password" class="validate">
+                <span class="helper-text" data-error="Invalid Password"></span>
+                <label for="password">Password</label>
+              </div>
+            </div>
+              <div class="center">
+              <button type="submit" class="waves-effect waves-light btn login-button">Sign In</button>
+            </div>
+              <br>
+              <br>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

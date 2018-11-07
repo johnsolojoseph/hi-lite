@@ -1,0 +1,44 @@
+<% include ../partials/header %>
+
+
+<div class="container center card-login">
+  <br>
+<div class="card-panel">
+    <h1>Edit Post</h1>
+    <br>
+<div class="row">
+  <form class="col s12" action="/api/v1/blogs/<%=blog._id%>?_method=PUT" method="POST">
+    <div class="row">
+      <div class="input-field col s12">
+        <input name="blog[title]" value="<%=blog.title%>" id="title" type="text" class="validate">
+        <label for="title">Title</label>
+      </div>
+    </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <input name="blog[image]" value="<%=blog.image%>" id="image" type="text" class="validate">
+    <label for="image">Image</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <input name="blog[tldr]" disabled value="<%= blog.tldr%>" id="disabled" type="text" class="validate">
+    <label for="disabled">TLDR</label>
+  </div>
+</div>
+<div class="row">
+  <div class="row">
+    <div class="input-field col s12">
+      <textarea name="blog[body]" id="body" class="materialize-textarea"><%=blog.body%></textarea>
+      <label for="body">Body</label>
+    </div>
+  </div>
+</div>
+<button class="btn waves-effect waves-light" type="submit" name="action">Save Changes
+</button>
+</form>
+</div>
+</div>
+</div>
+<% include ../partials/footer %>

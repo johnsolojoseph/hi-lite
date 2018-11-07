@@ -1,0 +1,63 @@
+<hr class="line-footer">
+<div class="footer-items" id="footer">
+    <ul>
+        <li> <a href=""> Writers </a> </li>
+        <li> <a href=""> Privacy </a> </li>
+        <li> <a href=""> Terms </a> </li>
+        <li> <a href=""> About </a> </li>
+    </ul>
+</div>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ <script type="text/javascript" src="/js/custom.js"></script>
+
+
+ <script>
+   (function($){
+     $(function(){
+
+       $('.sidenav').sidenav();
+
+     }); // end of document ready
+   })(jQuery); // end of jQuery name space
+
+   $(document).ready(function(){
+     $('#post').modal();
+   });
+
+   /*Scroll to top when arrow up clicked BEGIN*/
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#topBtn').fadeIn();
+    } else {
+        $('#topBtn').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#topBtn").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+
+$(document).ready(function(){
+   $('.tabs').tabs();
+ });
+
+
+
+
+ </script>
+
+
+</body>
+</html>

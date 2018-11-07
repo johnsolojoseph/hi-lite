@@ -1,0 +1,107 @@
+<div id="top">
+
+  <div class="fixed-action-btn hide-on-large-only">
+    <a class="btn-floating btn-large modal-trigger" href="ideas/add">
+      <i class="large material-icons edit-color">mode_edit</i>
+    </a>
+  </div>
+
+  <div class="fixed-action-btn hide-on-med-and-down">
+    <a class="btn-floating btn-large modal-trigger up-arrow" id="topBtn" href="#top">
+      <i class="large material-icons edit-color">arrow_upward</i>
+    </a>
+  </div>
+
+  <div class="container">
+    <h2> Newsfeed </h2>
+    <br>
+    <div class="row">
+      <div class ="col s12 m12 l9">
+        <ul class="tabs">
+          <li class="tab"><a class="active" href="#stories">Your Stories</a></li>
+          <li class="tab"><a href="#featured">Featured Stories</a></li>
+        </ul>
+
+  <br>
+
+{{#each ideas}}
+
+<div class="card-panel center">
+    <h4>{{title}}</h4>
+    <p name="content{{@index}}">{{details}}</p>
+    <div id="sentiment{{@index}}" >
+
+  </div>
+
+  <div id='content{{@index}}'></div>
+    <div class="row">
+      <div class="col s12">
+    <a href="/ideas/edit/{{id}}" class="waves-effect waves-light btn">Edit</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12">
+    <form method="post" action="/ideas/{{id}}?_method=DELETE">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn waves-effect waves-light" value="Delete">DELETE
+          </button>
+    </form>
+  </div>
+</div>
+
+  </div>
+<script>
+
+  var sentimood = new Sentimood();
+  console.log({{@index}});
+  var content = '{{details}}'
+  var sentiment = sentimood.analyze(content.substring(0, 600));
+  console.log(sentiment.score);
+  if(sentiment.score >= 10) {
+   document.getElementById("sentiment{{@index}}").innerHTML =
+   "<br><div style='background-color: green; color: white;' class='chip'>Extremely Positive</div><br>"
+ } else if(sentiment.score > 7) {
+    document.getElementById("sentiment{{@index}}").innerHTML =
+    "<br><div style='background-color: green; color: white;' class='chip'>Very Positive</div><br>"
+  } else if (sentiment.score > 1) {
+    document.getElementById("sentiment{{@index}}").innerHTML =
+    "<br><div style='background-color: green; color: white;' class='chip'>Positive</div><br>"
+  }
+  if(sentiment.score < 0) {
+    document.getElementById("sentiment{{@index}}").innerHTML =
+    "<br><div style='background-color: purple; color: white;' class='chip'>Negative</div><br>"
+  }
+
+
+
+  //Summarize API
+
+  				var content = "{{details}}"
+          console.log(content);
+  				Summary.summarize(null, content, function(err, summary) {
+            if (summary.length > 0) {
+  					document.getElementById("content{{@index}}").innerHTML =  " <br><span style='font-weight:bold'>tldr</span>" + summary + "<br>";
+          }
+  				});
+
+
+
+
+
+
+</script>
+
+{{else}}
+<div class="container center" id="stories">
+<div class="row">
+  <div class="">
+<p>No stories available </p>
+</div>
+</div>
+</div>
+{{/each}}
+
+
+</div>
+</div>
+</div>
