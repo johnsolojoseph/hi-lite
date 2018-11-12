@@ -46,10 +46,10 @@ router.post('/', ensureAuthenticated, (req, res) => {
   let errors = [];
 
   if(!req.body.title){
-    errors.push({text:'Please add a title'});
+    errors.push({text:'Title cannot be blank'});
   }
   if(!req.body.details){
-    errors.push({text:'Please add some details'});
+    errors.push({text:'Body cannot be blank'});
   }
 
   if(errors.length > 0){
@@ -67,7 +67,7 @@ router.post('/', ensureAuthenticated, (req, res) => {
     new Idea(newUser)
       .save()
       .then(idea => {
-        req.flash('success_msg', 'Material added');
+        req.flash('success_msg', 'New story added');
         res.redirect('/ideas');
       })
   }
@@ -85,7 +85,7 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
 
     idea.save()
       .then(idea => {
-        req.flash('success_msg', 'Material updated');
+        req.flash('success_msg', 'Story updated');
         res.redirect('/ideas');
       })
   });
@@ -95,7 +95,7 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
 router.delete('/:id', ensureAuthenticated, (req, res) => {
   Idea.remove({_id: req.params.id})
     .then(() => {
-      req.flash('success_msg', 'Material removed');
+      req.flash('success_msg', 'Story removed');
       res.redirect('/ideas');
     });
 });

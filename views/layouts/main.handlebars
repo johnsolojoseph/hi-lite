@@ -14,10 +14,9 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-<script type="text/javascript" src="/js/sentimood.js"></script>
-<script src='http://underscorejs.org/underscore-min.js'></script>
-<script type="text/javascript" src='/js/summary.js'></script>
-
+  <script type="text/javascript" src="/js/sentimood.js"></script>
+  <script src='http://underscorejs.org/underscore-min.js'></script>
+  <script type="text/javascript" src='/js/summary.js'></script>
   <title>Hi-Lite</title>
 </head>
 
@@ -41,54 +40,10 @@
         </ul>
     </div>
 
-
-
-
    <!-- Compiled and minified JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
    <script type="text/javascript" src="/js/custom.js"></script>
 
-
-   <script>
-     (function($){
-       $(function(){
-
-         $('.sidenav').sidenav();
-
-       }); // end of document ready
-     })(jQuery); // end of jQuery name space
-
-     $(document).ready(function(){
-       $('#post').modal();
-     });
-
-     /*Scroll to top when arrow up clicked BEGIN*/
-  $(window).scroll(function() {
-      var height = $(window).scrollTop();
-      if (height > 100) {
-          $('#topBtn').fadeIn();
-      } else {
-          $('#topBtn').fadeOut();
-      }
-  });
-  $(document).ready(function() {
-      $("#topBtn").click(function(event) {
-          event.preventDefault();
-          $("html, body").animate({ scrollTop: 0 }, "slow");
-          return false;
-      });
-
-  });
-
-  $(document).ready(function(){
-     $('.tabs').tabs();
-   });
-
-
-
-
-   </script>
 
 </body>
 

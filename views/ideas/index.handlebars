@@ -27,30 +27,45 @@
 {{#each ideas}}
 
 <div class="card-panel center">
+
+
+
     <h4>{{title}}</h4>
+
     <p name="content{{@index}}">{{details}}</p>
     <div id="sentiment{{@index}}" >
 
   </div>
 
   <div id='content{{@index}}'></div>
-    <div class="row">
-      <div class="col s12">
-    <a href="/ideas/edit/{{id}}" class="waves-effect waves-light btn">Edit</a>
-  </div>
+
+
+
+
+
+<div class="dropdown-menu-container right">
+  <a class='dropdown-trigger' href='#dropdown1' data-target='dropdown1'>
+    <i class="small material-icons">keyboard_arrow_down</i>
+  </a>
+  <ul id='dropdown1' class='dropdown-content dropdown-menu'>
+    <li>
+      <a href="/ideas/edit/{{id}}" class="">Edit</a>
+    </li>
+
+  </ul>
 </div>
-<div class="row">
-  <div class="col s12">
-    <form method="post" action="/ideas/{{id}}?_method=DELETE">
-          <input type="hidden" name="_method" value="DELETE">
-          <button type="submit" class="btn waves-effect waves-light" value="Delete">DELETE
-          </button>
-    </form>
-  </div>
-</div>
+<br>
 
   </div>
+
+
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  });
+
+
 
   var sentimood = new Sentimood();
   console.log({{@index}});

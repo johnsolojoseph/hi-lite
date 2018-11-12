@@ -220,22 +220,35 @@ input.valid[type=password] {
 }
 
 .tab a.active {
-  color:#2f353c !important;;
+  color:#1f1e1c !important;;
   background-color:transparent!important;
 }
 .tabs .tab a:hover {
   background-color: transparent!important;
-  color:#2f353c !important;;
+  color:#1f1e1c !important;;
 }
 .tabs .tab a:visited {
   background-color: transparent!important;
-  color:#2f353c !important;;
+  color:#1f1e1c !important;;
 }
 
 .tabs .tab a {
-  color: #2f353c !important;
+  color: #1f1e1c !important;
   background-color: transparent!important;
 }
 .tabs .indicator{
   background-color:#2f353c !important;;
+}
+
+i.small {
+  color: #757575 !important;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: #757575 !important;
+}
+
+.edit-buttons-container {
+  padding: 5% 0 2% 0;
+
 }
