@@ -8,18 +8,9 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const ml = require('sentiment');
-
 const app = express();
-
 const Sentiment = require('sentiment');
-const sentiment = new Sentiment();
 
-var result = sentiment.analyze('Cats are stupid.');
-console.log(result.score);
-var result = sentiment.analyze('Cats are happy.');
-console.log(result.score);
-var result = sentiment.analyze('Vanessa Lam is the prettiest girl in the world. I love her.');
-console.log(result.score);
 
 // Load routes
 const ideas = require('./routes/ideas');

@@ -1,8 +1,8 @@
 {{#if success_msg}}
+<body onload="M.toast({html: '{{success_msg}}'})">
+</body>
 
 
-
-<div onload="window.alert('{{success_msg}}');">
 
 
 </div>
@@ -10,6 +10,6 @@
 
 {{#if error_msg}}
 
-<div onload="window.alert('{{error_msg}}');">
-</div>
+<body onload="M.toast({html: '{{error}}'})">
+</body>
 {{/if}}
