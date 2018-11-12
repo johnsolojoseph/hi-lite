@@ -25,7 +25,7 @@ All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-
 
 ## DB
 
-- Mongoose for the object data mapper
+- Mongoose for the object data mapper and login system
 
 ## To Run Application
 
@@ -35,5 +35,5 @@ All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-
 
 ## References
 
-[Node Summary](https://github.com/jbrooksuk/node-summary)
+[Node Summary](https://github.com/jbrooksuk/node-summary) <br>
 [Sentiment](https://www.npmjs.com/package/sentiment)
