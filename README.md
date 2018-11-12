@@ -1,4 +1,4 @@
-# TLDRblogApp :page_facing_up: :newspaper:
+# Hi-Lite :page_facing_up: :newspaper:
 
 Build Status: [![CircleCI](https://circleci.com/gh/AcAntellAno/TLDRblogApp.svg?style=svg)](https://circleci.com/gh/AcAntellAno/TLDRblogApp)
 <br>
