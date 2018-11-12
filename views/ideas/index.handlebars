@@ -39,6 +39,7 @@
   </div>
 
   <div id='content{{@index}}'></div>
+  <br>
 
 
 
@@ -83,7 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("sentiment{{@index}}").innerHTML =
     "<br><div style='background-color: green; color: white;' class='chip'>Positive</div><br>"
   }
-  if(sentiment.score < 0) {
+  if(sentiment.score < -10) {
+    document.getElementById("sentiment{{@index}}").innerHTML =
+    "<br><div style='background-color: purple; color: white;' class='chip'>Toxic</div><br>"
+  } else if(sentiment.score < -7) {
+    document.getElementById("sentiment{{@index}}").innerHTML =
+    "<br><div style='background-color: purple; color: white;' class='chip'> Very Negative</div><br>"
+  } else if(sentiment.score < 0) {
     document.getElementById("sentiment{{@index}}").innerHTML =
     "<br><div style='background-color: purple; color: white;' class='chip'>Negative</div><br>"
   }
