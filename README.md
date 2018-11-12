@@ -2,6 +2,7 @@
 
 Build Status: [![CircleCI](https://circleci.com/gh/AcAntellAno/TLDRblogApp.svg?style=svg)](https://circleci.com/gh/AcAntellAno/TLDRblogApp)
 <br>
+
 ## The Problem:
 
 As humans, we have very short attention spans. We are extremely busy and we hardly have time to sit and read. Well, to keep up with the trend, we want to help make getting information faster. We want to create a web application fused with AI and ML to help the user get the summary of any particular article they choose. A TLDR for every blog and news story. :alien:
