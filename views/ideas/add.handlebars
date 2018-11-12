@@ -9,7 +9,8 @@
   <form class="col s12" action="/ideas" method="POST">
     <div class="row">
       <div class="input-field col s12">
-        <input name="title" id="title" type="text" class="validate">
+        <input name="title" id="title" type="text" class="validate" required>
+        <span class="helper-text" data-error="Title cannot be blank"></span>
         <label for="title">Title</label>
       </div>
     </div>
@@ -19,7 +20,8 @@
 <div class="row">
   <div class="row">
     <div class="input-field col s12">
-      <textarea name="details" id="body" class="materialize-textarea"></textarea>
+      <textarea name="details" id="body" class="materialize-textarea validate" required></textarea>
+      <span class="helper-text" data-error="Body cannot be blank"></span>
       <label for="body">Body</label>
     </div>
   </div>
