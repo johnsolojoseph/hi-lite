@@ -1,7 +1,7 @@
 {
   "name": "hi-lite",
   "version": "1.0.0",
-  "description": "Application that generates quick summaries of posted blogs and news articles",
+  "description": "Application that generates quick summaries of posted blogs and news articles while performing sentiment analysis",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
