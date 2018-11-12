@@ -9,6 +9,10 @@ As humans, we have very short attention spans. We are extremely busy and we hard
 
 All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
+## Team:
+[John Solo](https://github.com/johnsolojoseph)
+[Anthony Cantellano](https://github.com/AcAntellAno)
+
 ## The Stack:
 
 ### Frontend
