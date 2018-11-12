@@ -11,13 +11,13 @@ All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-
 
 ## The Stack:
 
-## Frontend
+### Frontend
 
 - HTML5
 - CSS3
 - Materialize CSS
 
-## Backend
+### Backend
 
 - NodeJS
 - ExpressJS
