@@ -23,7 +23,7 @@ All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-
 - ExpressJS
 - Handlebars for templating
 
-## DB
+### DB
 
 - Mongoose for the object data mapper and login system
 
