@@ -1,12 +1,12 @@
 {
-  "name": "vidjot",
+  "name": "hi-lite",
   "version": "1.0.0",
-  "description": "App to create video ideas",
+  "description": "Application that generates quick summaries of posted blogs and news articles",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Brad Traversy",
+  "author": "John Solo and Anthony Cantellano",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
