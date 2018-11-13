@@ -55,10 +55,10 @@
 
 
 <div class="dropdown-menu-container right">
-  <a class='dropdown-trigger' href='#dropdown1' data-target='dropdown1'>
+  <a class='dropdown-trigger' href='#dropdown1' data-target='dropdown{{@index}}'>
     <i class="small material-icons">keyboard_arrow_down</i>
   </a>
-  <ul id='dropdown1' class='dropdown-content dropdown-menu'>
+  <ul id='dropdown{{@index}}' class='dropdown-content dropdown-menu'>
     <li>
       <a href="/ideas/edit/{{id}}" class="">Edit</a>
     </li>
