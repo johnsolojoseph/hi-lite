@@ -29,7 +29,7 @@
 
 
 
-    <h4>{{title}}</h4>
+    <h4 class="center">{{title}}</h4>
 
     {{#if image}}
     <br>
@@ -92,26 +92,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var sentimood = new Sentimood();
   console.log({{@index}});
-  var content = '{{details}}'
-  var sentiment = sentimood.analyze(content.substring(0, 600));
-  console.log(sentiment.score);
-  if(sentiment.score >= 10) {
+  var details = '{{details}}'
+  var title = '{{title}}'
+  var detailsAnalysis = sentimood.analyze(details);
+  var titleAnalysis =  sentimood.analyze(title);
+  var score = detailsAnalysis.score + titleAnalysis.score;
+
+  console.log(score);
+  if(score >= 10) {
    document.getElementById("sentiment{{@index}}").innerHTML =
    "<br><div style='background-color: green; color: white;' class='chip'>Extremely Positive</div><br>"
- } else if(sentiment.score > 7) {
+ } else if(score > 7) {
     document.getElementById("sentiment{{@index}}").innerHTML =
     "<br><div style='background-color: green; color: white;' class='chip'>Very Positive</div><br>"
-  } else if (sentiment.score > 1) {
+  } else if (score > 1) {
     document.getElementById("sentiment{{@index}}").innerHTML =
     "<br><div style='background-color: green; color: white;' class='chip'>Positive</div><br>"
   }
-  if(sentiment.score < -10) {
+  if(score < -10) {
     document.getElementById("sentiment{{@index}}").innerHTML =
     "<br><div style='background-color: purple; color: white;' class='chip'>Toxic</div><br>"
-  } else if(sentiment.score < -7) {
+  } else if(score < -7) {
     document.getElementById("sentiment{{@index}}").innerHTML =
     "<br><div style='background-color: purple; color: white;' class='chip'> Very Negative</div><br>"
-  } else if(sentiment.score < 0) {
+  } else if(score < 0) {
     document.getElementById("sentiment{{@index}}").innerHTML =
     "<br><div style='background-color: purple; color: white;' class='chip'>Negative</div><br>"
   }
