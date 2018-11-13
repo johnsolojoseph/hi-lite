@@ -89,7 +89,7 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
 
     idea.save()
       .then(idea => {
-        req.flash('success_msg', 'Newsfeed updated');
+        req.flash('success_msg', 'Story updated');
         res.redirect('/ideas');
       })
   });
