@@ -278,5 +278,16 @@ outline: none;
     -moz-hyphens:auto;
     -webkit-hyphens:auto;
     -o-hyphens:auto;
-    hyphens:auto; 
+    hyphens:auto;
+}
+.fa-3x {
+  padding-right: 8px;
+}
+
+.padding-bottom-50 {
+  padding-bottom: 50px;
+}
+
+.social-icons {
+  color: inherit;
 }
