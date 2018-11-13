@@ -1,1 +1,13 @@
 
+{{#if error}}
+<body onload="M.toast({html: '{{error}}'})">
+</body>
+
+{{/if}}
+
+
+{{#each errors}}
+<body onload="M.toast({html: '{{errors}}'})">
+</body>
+
+{{/each}}

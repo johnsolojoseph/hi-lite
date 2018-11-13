@@ -291,3 +291,8 @@ outline: none;
 .social-icons {
   color: inherit;
 }
+
+#footer {
+bottom: 0;
+position: fixed;
+}
