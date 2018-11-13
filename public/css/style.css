@@ -272,3 +272,11 @@ i.small {
    border-color: transparent;
 outline: none;
 }
+
+.details {
+  word-wrap: break-word;
+    -moz-hyphens:auto;
+    -webkit-hyphens:auto;
+    -o-hyphens:auto;
+    hyphens:auto; 
+}
