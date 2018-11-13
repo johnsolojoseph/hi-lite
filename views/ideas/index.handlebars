@@ -30,10 +30,19 @@
 
 
     <h4>{{title}}</h4>
+
+    {{#if image}}
     <br>
+    <div class="center">
+    <img class="responsive-img" alt="Image URL broken" src="{{image}}">
+  </div>
+  <br>
+    {{/if}}
 
     <p name="content{{@index}}">{{details}}</p>
     <br>
+
+
     <div id="sentiment{{@index}}" >
 
   </div>

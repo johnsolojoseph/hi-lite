@@ -56,12 +56,14 @@ router.post('/', ensureAuthenticated, (req, res) => {
     res.render('/add', {
       errors: errors,
       title: req.body.title,
+      image: req.body.image,
       details: req.body.details
     });
   } else {
     const newUser = {
       title: req.body.title,
       details: req.body.details,
+      image: req.body.image,
       user: req.user.id
     }
     new Idea(newUser)
@@ -78,14 +80,16 @@ router.put('/:id', ensureAuthenticated, (req, res) => {
   Idea.findOne({
     _id: req.params.id
   })
+
   .then(idea => {
     // new values
     idea.title = req.body.title;
     idea.details = req.body.details;
+    idea.image = req.body.image;
 
     idea.save()
       .then(idea => {
-        req.flash('success_msg', 'Story updated');
+        req.flash('success_msg', 'Newsfeed updated');
         res.redirect('/ideas');
       })
   });
