@@ -251,3 +251,24 @@ i.small {
 .edit-buttons-container {
   padding: 5% 0 2% 0;
 }
+
+.delete-btn {
+  color: #f44336;
+  background-color: transparent;
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 17px;
+  border: none;
+  background: none;
+}
+
+.delete-btn:active {
+  background-color: transparent;
+  outline:none;
+}
+
+.delete-btn:focus{
+  background-color:transparent;
+   border-color: transparent;
+outline: none;
+}

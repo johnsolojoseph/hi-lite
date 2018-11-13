@@ -60,7 +60,19 @@
   </a>
   <ul id='dropdown{{@index}}' class='dropdown-content dropdown-menu'>
     <li>
-      <a href="/ideas/edit/{{id}}" class="">Edit</a>
+
+      <a href="/ideas/edit/{{id}}" class="">
+        <i class="far fa-edit"></i>
+        Edit</a>
+    </li>
+    <li>
+      <form method="post" action="/ideas/{{id}}?_method=DELETE">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="delete-btn" value="Delete">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              Delete
+            </button>
+      </form>
     </li>
 
   </ul>
