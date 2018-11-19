@@ -39,7 +39,7 @@
   <br>
     {{/if}}
 
-    <p class="details" name="content{{@index}}">{{details}}</p>
+    <p class="details flow-text" name="content{{@index}}">{{details}}</p>
     <br>
 
 
@@ -47,7 +47,7 @@
 
   </div>
 
-  <div id='content{{@index}}'></div>
+  <div id='content{{@index}}' class='flow-text'></div>
   <br>
 
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log(content);
   				Summary.summarize(null, content, function(err, summary) {
             if (summary.length > 0) {
-  					document.getElementById("content{{@index}}").innerHTML =  " <br><span style='font-weight:bold'>tldr</span>" + summary + "<br>";
+  					document.getElementById("content{{@index}}").innerHTML =  " <br><span style='font-weight:bold'>TL;DR:</span>" + summary + "<br>";
           }
   				});
 
@@ -151,5 +151,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </div>
+
+<div class ="col l4 offset-l1 hide-on-med-and-down">
+
+<div class="card-panel">
+  <div class="center">
+  <img class="responsive-img create-logo" src="/img/headerIMG.png" alt="photo">
+</div>
+  <h6 class="flow-text">
+    A single place for your captured experiences.
+    Check here for a source of creativity and inspiration.
+  </h6>
+  <br>
+  <div class="center">
+  <a href="/ideas/add" class="create-button">Create Story</a>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
 </div>
 </div>
