@@ -1,4 +1,6 @@
-
+body {
+  background-color: #fafafa;
+}
 nav {
   background-color: rgb(44, 62, 80) !important;
   color: rgb(255, 255, 255) !important;
@@ -100,7 +102,7 @@ i.prefix {
 .ghost-button-rounded-corners:hover,
 .ghost-button-rounded-corners:active {
   background-color: rgb(44, 62, 80);
-  color: #fff;
+  color: #fafafa;
 }
 
 #about {
