@@ -82,6 +82,16 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+//Devs Route
+app.get('/devs', (req, res) => {
+  res.render('devs');
+});
+
+//How It Works Route
+app.get('/howitworks', (req, res) => {
+  res.render('howitworks');
+});
+
 
 // Use routes
 app.use('/ideas', ideas);
