@@ -178,7 +178,6 @@ button.login-button {
 }
 
 input.valid[type=email] {
-  color: rgb(44,62,80) !important;
   box-shadow: 0 1px 0 0 rgb(44,62,80) !important;
   border-bottom: 1px solid rgb(44,62,80) !important;
 }
@@ -194,7 +193,6 @@ input.valid[type=email] {
 }
 
 input.valid[type=text] {
-  color: rgb(44,62,80) !important;
   box-shadow: 0 1px 0 0 rgb(44,62,80) !important;
   border-bottom: 1px solid rgb(44,62,80) !important;
 }
@@ -210,7 +208,16 @@ input.valid[type=text] {
 }
 
 input.valid[type=password] {
+  box-shadow: 0 1px 0 0 rgb(44,62,80) !important;
+  border-bottom: 1px solid rgb(44,62,80) !important;
+}
+
+label.active {
   color: rgb(44,62,80) !important;
+}
+
+
+textarea.valid {
   box-shadow: 0 1px 0 0 rgb(44,62,80) !important;
   border-bottom: 1px solid rgb(44,62,80) !important;
 }
